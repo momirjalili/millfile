@@ -102,3 +102,4 @@ python*/
 dist
 .tox
 .buildout/
+.idea/
