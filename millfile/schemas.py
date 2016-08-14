@@ -7,6 +7,8 @@ from marshmallow import Schema, fields, pprint
 
 
 class ImageParamsSchema(Schema):
+    url = fields.String(required=True)
+    format = fields.String()
     height = fields.Integer()
     width = fields.Integer()
     progressive = fields.Boolean()
