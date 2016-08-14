@@ -32,6 +32,13 @@ class ImageResource:
             data.get('height',image.size[1]))
         )
 
+        if data.get('crop'):
+            left = data.get('left', 0)
+            upper = data.get('upper', 0)
+            right = data.get('right', image.size[0])
+            lower = data.get('lower', image.size[1])
+            image = image.crop((left, upper, right, lower))
+
         with io.BytesIO() as output:
             image.save(output, data.get('format', 'png').upper())
             resp.stream = output.getvalue()
