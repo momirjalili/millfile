@@ -103,3 +103,4 @@ dist
 .tox
 .buildout/
 .idea/
+.vagrant/

@@ -1,4 +1,3 @@
 rabbitmq_packages:
   pkg.installed:
-    - rabbitmq-server
-
+    - name:  rabbitmq-server

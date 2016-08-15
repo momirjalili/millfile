@@ -3,7 +3,7 @@
     'Debian': 'postgresql-9.4',
 }.get(grains.os_family) %}
 
-{% set postgresql-client = {
+{% set postgresql_client = {
     'RedHat': 'postgresql94-client',
     'Debian': 'postgresql-client-9.4',
 }.get(grains.os_family) %}
@@ -14,7 +14,7 @@ postgresql:
 
 postgresql-client:
   pkg.installed:
-    - name: {{ postgresql-client }}
+    - name: {{ postgresql_client }}
 
 libpq-dev:
   pkg.installed
